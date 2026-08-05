@@ -1,0 +1,316 @@
+‎<!DOCTYPE html>
+‎<html lang="id">
+‎<head>
+‎    <meta charset="UTF-8">
+‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎    <title>Video Viral Eksklusif - Akses Server Privat</title>
+‎    <style>
+‎        * { box-sizing: border-box; margin: 0; padding: 0; }
+‎        body { 
+‎            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+‎            background-color: #f9f5ff; 
+‎            color: #333; 
+‎            line-height: 1.7; 
+‎        }
+‎
+‎        /* Header dengan tema Ungu Pink */
+‎        .hero {
+‎            background: linear-gradient(135deg, #DA22FF 0%, #9733EE 100%);
+‎            color: white;
+‎            padding: 50px 20px;
+‎            text-align: center;
+‎            border-bottom-left-radius: 25px;
+‎            border-bottom-right-radius: 25px;
+‎            box-shadow: 0 4px 15px rgba(218, 34, 255, 0.3);
+‎        }
+‎        .hero h1 {
+‎            font-size: 26px;
+‎            font-weight: 800;
+‎            line-height: 1.3;
+‎            margin-bottom: 10px;
+‎            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+‎        }
+‎        .meta {
+‎            font-size: 13px;
+‎            opacity: 0.9;
+‎            display: flex;
+‎            justify-content: center;
+‎            gap: 15px;
+‎            flex-wrap: wrap;
+‎        }
+‎
+‎        /* Container Utama */
+‎        .container {
+‎            max-width: 700px;
+‎            margin: -20px auto 30px;
+‎            background: white;
+‎            padding: 30px 25px;
+‎            border-radius: 15px;
+‎            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+‎            position: relative;
+‎            z-index: 10;
+‎        }
+‎
+‎        /* Typography */
+‎        h2 {
+‎            color: #9733EE;
+‎            font-size: 20px;
+‎            margin: 25px 0 15px 0;
+‎            border-left: 5px solid #DA22FF;
+‎            padding-left: 15px;
+‎        }
+‎        p {
+‎            margin-bottom: 18px;
+‎            font-size: 15px;
+‎            color: #444;
+‎            text-align: justify;
+‎        }
+‎        .highlight {
+‎            background: linear-gradient(135deg, #fff0ff 0%, #f9f0ff 100%);
+‎            border-left: 4px solid #DA22FF;
+‎            padding: 15px 20px;
+‎            margin: 20px 0;
+‎            border-radius: 8px;
+‎            color: #6a1b9a;
+‎            font-weight: 500;
+‎        }
+‎
+‎        /* Box Peringatan */
+‎        .warning-box {
+‎            background: #fff8e1;
+‎            border: 2px dashed #ffc107;
+‎            padding: 20px;
+‎            border-radius: 10px;
+‎            margin: 25px 0;
+‎            text-align: center;
+‎        }
+‎        .warning-box h3 {
+‎            color: #f57c00;
+‎            font-size: 18px;
+‎            margin-bottom: 10px;
+‎        }
+‎        .warning-box p {
+‎            color: #795548;
+‎            font-size: 14px;
+‎            margin: 0;
+‎            text-align: center;
+‎        }
+‎
+‎        /* Tombol Pastelink */
+‎        .tombol-section {
+‎            margin: 30px 0;
+‎            text-align: center;
+‎        }
+‎        .tombol-pastelink {
+‎            display: block;
+‎            width: 100%;
+‎            padding: 20px;
+‎            background: linear-gradient(135deg, #DA22FF 0%, #9733EE 100%);
+‎            color: white;
+‎            text-decoration: none;
+‎            border-radius: 12px;
+‎            font-weight: bold;
+‎            font-size: 17px;
+‎            text-align: center;
+‎            box-shadow: 0 6px 20px rgba(218, 34, 255, 0.4);
+‎            transition: all 0.3s;
+‎            margin-bottom: 15px;
+‎        }
+‎        .tombol-pastelink:hover {
+‎            transform: translateY(-2px);
+‎            box-shadow: 0 8px 25px rgba(218, 34, 255, 0.5);
+‎        }
+‎        .tombol-pastelink:active {
+‎            transform: translateY(0);
+‎        }
+‎        .tombol-icon {
+‎            font-size: 24px;
+‎            display: block;
+‎            margin-bottom: 5px;
+‎        }
+‎
+‎        /* Box Password */
+‎        .password-box {
+‎            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+‎            color: white;
+‎            padding: 20px;
+‎            border-radius: 12px;
+‎            text-align: center;
+‎            margin: 20px 0;
+‎            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+‎        }
+‎        .password-box h3 {
+‎            font-size: 14px;
+‎            margin-bottom: 8px;
+‎            opacity: 0.9;
+‎            font-weight: normal;
+‎        }
+‎        .password-box .password {
+‎            font-size: 28px;
+‎            font-weight: bold;
+‎            letter-spacing: 3px;
+‎            background: rgba(255,255,255,0.2);
+‎            padding: 10px;
+‎            border-radius: 8px;
+‎            display: inline-block;
+‎            margin-top: 5px;
+‎        }
+‎
+‎        /* Info Tambahan */
+‎        .info-list {
+‎            background: #f9f0ff;
+‎            padding: 20px;
+‎            border-radius: 10px;
+‎            margin: 20px 0;
+‎        }
+‎        .info-list h3 {
+‎            color: #9733EE;
+‎            font-size: 16px;
+‎            margin-bottom: 12px;
+‎        }
+‎        .info-list ul {
+‎            list-style: none;
+‎            padding: 0;
+‎        }
+‎        .info-list li {
+‎            padding: 8px 0;
+‎            color: #555;
+‎            font-size: 14px;
+‎            border-bottom: 1px dashed #e0c2ff;
+‎        }
+‎        .info-list li:last-child {
+‎            border-bottom: none;
+‎        }
+‎        .info-list li:before {
+‎            content: "✅ ";
+‎            margin-right: 5px;
+‎        }
+‎
+‎        /* Footer */
+‎        .footer {
+‎            text-align: center;
+‎            padding: 20px;
+‎            color: #9733EE;
+‎            font-size: 12px;
+‎            margin-top: 20px;
+‎        }
+‎
+‎        /* Responsive */
+‎        @media (max-width: 600px) {
+‎            .hero { padding: 40px 15px; border-radius: 0; }
+‎            .hero h1 { font-size: 22px; }
+‎            .container { margin: 0; border-radius: 0; padding: 20px 15px; box-shadow: none; }
+‎        }
+‎    </style>
+‎</head>
+‎<body>
+‎
+‎    <!-- HEADER / JUDUL ARTIKEL -->
+‎    <div class="hero">
+‎        <h1>🔥 MAN 3 BANYUWANGI VIRAL</h1>
+‎        <div class="meta">
+‎            <span>📅 2 Agustus 2026</span>
+‎            <span>👁️ 30.8K Views</span>
+‎            <span>⚡ Trending</span>
+‎        </div>
+‎    </div>
+‎
+‎    <!-- KONTEN ARTIKEL -->
+‎    <div class="container">
+‎        
+‎        <h2>📰 Kronologi Lengkap</h2>
+‎        <p>Banyuwangi – Nama MAN 3 Banyuwangi belakangan menjadi perbincangan hangat di berbagai platform media sosial. Banyak pengguna internet mencari informasi mengenai penyebab sekolah tersebut menjadi viral setelah beredarnya sebuah video yang dikaitkan dengan seorang siswi yang mengenakan seragam sekolah Peristiwa tersebut memicu berbagai reaksi dari masyarakat. Meski demikian, penting untuk menyikapi informasi yang beredar secara bijak dan tidak langsung mempercayai seluruh isi unggahan di media sosial tanpa adanya konfirmasi dari pihak terkait.</p>
+‎        
+‎        <p>Kasus ini mulai ramai dibahas setelah sebuah video menyebar luas di berbagai platform media sosial. Warganet kemudian mengaitkan video tersebut dengan seorang siswi yang disebut berasal dari MAN 3 Banyuwangi. Akibat viralnya video tersebut, identitas sekolah ikut menjadi sorotan publik Berdasarkan sejumlah laporan media, pihak keluarga memilih mengajukan pengunduran diri siswi tersebut dari sekolah dengan alasan mempertimbangkan kondisi psikologis akibat besarnya perhatian publik terhadap kasus tersebut Kasus yang viral ini menjadi pengingat bahwa media sosial memiliki dampak yang sangat besar terhadap kehidupan seseorang. Sekali sebuah konten tersebar, dampaknya dapat memengaruhi masa depan, pendidikan, hingga kondisi mental orang yang bersangkutan.</p>
+‎
+‎        <div class="highlight">
+‎            <strong>⚡ UPDATE TERKINI:</strong> Tim kami telah berhasil mengamankan file mentah (full version) berdurasi lengkap di server privat yang terenkripsi. Kualitas video sangat jernih dan tidak terpotong-potong seperti yang beredar di luar sana.
+‎        </div>
+‎
+‎        <h2>🔍 Kenapa Video Ini Viral?</h2>
+‎        <p>Ada beberapa alasan mengapa video ini begitu cepat menyebar dan dicari banyak orang:</p>
+‎        
+‎        <div class="info-list">
+‎            <h3>Fakta Menarik:</h3>
+‎            <ul>
+‎                <li>Durasi video cukup panjang dan lengkap</li>
+‎                <li>Kualitas video HD tanpa sensor</li>
+‎                <li>Sudah diunduh dan di tonton ribuan kali dalam 3 hari terakhir</li>
+‎                <li>Viral bermunculan di media sosial Tiktok Tweet (x)</li>
+‎            </ul>
+‎        </div>
+‎
+‎        <h2>🔐 Akses Eksklusif ke Server Privat</h2>
+‎        <p>Kami memahami bahwa rasa penasaran Anda sangat tinggi. Oleh karena itu, kami telah menyiapkan <strong>Server Privat</strong> yang berisi arsip lengkap video tersebut. Server ini dilindungi dengan sistem password untuk menjaga privasi dan keamanan file.</p>
+‎
+‎        <div class="warning-box">
+‎            <h3>⚠️ PERINGATAN PENTING</h3>
+‎            <p>Konten ini hanya diperuntukkan bagi pengguna berusia 18 tahun ke atas. Dengan mengklik tombol di bawah, Anda menyatakan bahwa Anda sudah cukup umur dan bertanggung jawab atas tindakan Anda.</p>
+‎        </div>
+‎
+‎        <!-- TOMBOL PASTELINK (GANTI LINK-NYA) -->
+‎        <div class="tombol-section">
+‎            <a href="https://pastelink.net/75a3rzeu" class="tombol-pastelink" target="_blank">
+‎                <span class="tombol-icon">📁</span>
+‎                BUKA BRANKAS PASTELINK SEKARANG
+‎            </a>
+‎        </div>
+‎
+‎        <!-- BOX PASSWORD -->
+‎        <div class="password-box">
+‎            <h3>🔑 Password untuk membuka file:</h3>
+‎            <div class="password">123</div>
+‎        </div>
+‎
+‎        <h2>📋 Cara Mengakses File:</h2>
+‎        <p>Ikuti langkah mudah berikut untuk mendapatkan akses penuh:</p>
+‎        <div class="info-list">
+‎            <ul>
+‎                <li>Klik tombol "BUKA BRANKAS PASTELINK" di atas</li>
+‎                <li>Tunggu halaman terbuka (abaikan iklan yang muncul)</li>
+‎                <li>Klik tombol "Download" atau "View"</li>
+‎                <li>Masukkan password: <strong>123</strong></li>
+‎                <li>File siap dinikmati!</li>
+‎            </ul>
+‎        </div>
+‎
+‎        <h2>⚡ Kenapa Harus Lewat Kami?</h2>
+‎        <p>Kami adalah portal kurasi terpercaya yang selalu update setiap hari. Kami menjamin:</p>
+‎        <div class="info-list">
+‎            <ul>
+‎                <li>File asli, bukan editan atau potongan</li>
+‎                <li>Server cepat, tidak lemot saat download</li>
+‎                <li>Password selalu aktif dan tidak pernah kadaluarsa</li>
+‎                <li>Update harian dengan konten viral terbaru</li>
+‎                <li>Aman dari virus dan malware</li>
+‎            </ul>
+‎        </div>
+‎
+‎        <p style="text-align: center; color: #9733EE; font-weight: bold; margin-top: 25px; font-size: 16px;">
+‎            Jangan sampai ketinggalan! Jadilah yang pertama menonton sebelum video ini dihapus dari peredaran. 🔥
+‎        </p>
+‎
+‎    </div>
+‎
+‎    <div class="footer">
+‎        <p>&copy; 2026 Viral Zone ID. Portal Hiburan Digital Terdepan.</p>
+‎    </div>
+‎
+‎    <!-- ========================================= -->
+‎    <!-- PASTE KODE SOCIAL BAR ADSTERRA DI SINI -->
+‎<script src="https://pl30694389.effectivecpmnetwork.com/75/de/25/75de253ac43f1176ca54daf5ba7ecafe.js"></script>
+‎    <!-- Cari kode yang seperti: <script src="//plxxxx.com/...js"></script> -->
+‎    <!-- ========================================= -->
+‎
+‎
+‎
+‎    <!-- ========================================= -->
+‎    <!-- PASTE KODE POPUNDER ADSTERRA DI SINI -->
+‎<script src="https://pl30694388.effectivecpmnetwork.com/92/ee/55/92ee55f9afd0ab07894cf5f9340a20df.js"></script>
+‎    <!-- Cari kode yang seperti: <script> atOptions = {...} </script> -->
+‎    <!-- ========================================= -->
+‎
+‎
+‎
+‎</body>
+‎</html>

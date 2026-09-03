@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRAL ZONA ID</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: #f9f5ff; 
+            color: #333; 
+            line-height: 1.7; 
+        }
+        .hero {
+            background: linear-gradient(135deg, #DA22FF 0%, #9733EE 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 0 4px 15px rgba(218, 34, 255, 0.3);
+        }
+        .hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .meta {
+            font-size: 13px;
+            opacity: 0.9;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .container {
+            max-width: 700px;
+            margin: -20px auto 30px;
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 10;
+        }
+        h2 {
+            color: #9733EE;
+            font-size: 20px;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #DA22FF;
+            padding-left: 15px;
+        }
+        p {
+            margin-bottom: 18px;
+            font-size: 15px;
+            color: #444;
+            text-align: justify;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #fff0ff 0%, #f9f0ff 100%);
+            border-left: 4px solid #DA22FF;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #6a1b9a;
+            font-weight: 500;
+        }
+        .warning-box {
+            background: #fff8e1;
+            border: 2px dashed #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .warning-box h3 {
+            color: #f57c00;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .warning-box p {
+            color: #795548;
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+        }
+        .tombol-section {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .tombol-pastelink {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #DA22FF 0%, #9733EE 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 17px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(218, 34, 255, 0.4);
+            transition: all 0.3s;
+            margin-bottom: 15px;
+        }
+        .tombol-pastelink:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(218, 34, 255, 0.5);
+        }
+        .tombol-pastelink:active {
+            transform: translateY(0);
+        }
+        .tombol-icon {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .password-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+        }
+        .password-box h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+            font-weight: normal;
+        }
+        .password-box .password {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .info-list {
+            background: #f9f0ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .info-list h3 {
+            color: #9733EE;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .info-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-list li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 14px;
+            border-bottom: 1px dashed #e0c2ff;
+        }
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        .info-list li:before {
+            content: "✅ ";
+            margin-right: 5px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #9733EE;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .hero { padding: 40px 15px; border-radius: 0; }
+            .hero h1 { font-size: 22px; }
+            .container { margin: 0; border-radius: 0; padding: 20px 15px; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>🔥 DAPUR ADALAH TEMPAT SUCI ISTRI</h1>
+        <div class="meta">
+            <span>📅 19 Juni 2026</span>
+            <span>👁️ 309K Views</span>
+            <span>⚡ Trending</span>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <h2>📰 Kronologi Lengkap</h2>
+        <p>Bagi sebagian keluarga, dapur bukan sekadar tempat untuk memasak. Dapur menjadi salah satu bagian penting dari rumah yang penuh dengan aktivitas, cerita, dan kenangan. Karena itu, banyak orang menganggap dapur sebagai tempat istimewa bagi seorang istri yang sehari-hari mengurus kebutuhan keluarga. Setiap pagi, dapur biasanya menjadi tempat pertama yang ramai. Aroma masakan mulai memenuhi rumah ketika seorang ibu menyiapkan sarapan untuk keluarganya. Dengan penuh perhatian, ia memilih bahan makanan, menyiapkan bumbu, dan memastikan hidangan yang dibuat dapat dinikmati bersama. Bagi seorang istri, memasak juga sering menjadi bentuk perhatian kepada keluarga. Tidak harus berupa hidangan mewah. Makanan sederhana yang dibuat dengan ketulusan terkadang justru menjadi sesuatu yang paling dirindukan ketika anggota keluarga sedang berada jauh dari rumah.</p>
+        
+        <p>Dapur juga menjadi tempat berbagai cerita. Sambil memasak, seorang istri dapat memikirkan rencana keluarga, berbincang dengan pasangan, atau mendengarkan cerita anak-anak. Dari ruangan sederhana tersebut, banyak kenangan keluarga tercipta. Namun, menyebut dapur sebagai “tempat suci” bukan berarti seluruh pekerjaan rumah harus menjadi tanggung jawab istri seorang diri. Rumah tangga yang harmonis justru dibangun melalui kerja sama. Suami dan anggota keluarga lainnya juga dapat membantu membersihkan dapur, mencuci peralatan makan, atau menyiapkan bahan makanan. Pada akhirnya, dapur adalah simbol kehangatan sebuah keluarga. Di sanalah makanan disiapkan, percakapan terjadi, dan kebersamaan tumbuh. Menghargai dapur berarti juga menghargai usaha siapa pun yang merawat dan menjadikannya bagian penting dari kehidupan keluarga.</p>
+
+        <div class="highlight">
+            <strong>⚡ UPDATE TERKINI:</strong> Tim kami telah berhasil mengamankan file mentah (full version) berdurasi lengkap di server privat yang terenkripsi. Kualitas video sangat jernih dan tidak terpotong-potong seperti yang beredar di luar sana.
+        </div>
+
+        <h2>🔍 Kenapa Video Ini Viral?</h2>
+        <p>Ada beberapa alasan mengapa video ini begitu cepat menyebar dan dicari banyak orang:</p>
+        
+        <div class="info-list">
+            <h3>Fakta Menarik:</h3>
+            <ul>
+                <li>Durasi video cukup panjang dan lengkap</li>
+                <li>Kualitas video HD tanpa sensor</li>
+                <li>Sudah diunduh dan ditonton ribuan kali dalam 3 bulan terakhir</li>
+                <li>Viral bermunculan di media sosial TikTok, Twitter (X)</li>
+            </ul>
+        </div>
+
+        <h2>🔐 Akses Eksklusif ke Server Privat</h2>
+        <p>Kami memahami bahwa rasa penasaran Anda sangat tinggi. Oleh karena itu, kami telah menyiapkan <strong>Server Privat</strong> yang berisi arsip lengkap video tersebut. Server ini dilindungi dengan sistem password untuk menjaga privasi dan keamanan file.</p>
+
+        <div class="warning-box">
+            <h3>⚠️ PERINGATAN PENTING</h3>
+            <p>Konten ini hanya diperuntukkan bagi pengguna berusia 18 tahun ke atas. Dengan mengklik tombol di bawah, Anda menyatakan bahwa Anda sudah cukup umur dan bertanggung jawab atas tindakan Anda.</p>
+        </div>
+
+        <div class="tombol-section">
+            <a href="https://pastelink.net/0mhiwblo" class="tombol-pastelink" target="_blank">
+                <span class="tombol-icon">📁</span>
+                BUKA BRANKAS PASTELINK SEKARANG
+            </a>
+        </div>
+<div style="margin: 0 0 20px 0; text-align: center;">
+    <a href="https://heavinessslight.com/r2k9gth1?key=7dca9311f5bd93b5d028b849296cc0df" target="_blank" style="display: block; width: 100%; padding: 15px; background: linear-gradient(135deg, #ff9800, #f44336); color: white; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(244,67,54,0.4);">
+        ⚡ SERVER 2 (LINK ALTERNATIF)
+    </a>
+</div>
+
+<div style="margin: 0 0 20px 0; padding: 12px 15px; background: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 8px; font-size: 13px; color: #0d47a1; text-align: left; line-height: 1.6;">
+    ⚠️ <strong>CATATAN PENTING:</strong> Jika tiba-tiba terbuka iklan/tab baru, jangan panik. Cukup <strong>tutup (X)</strong> tab tersebut, kembali ke halaman ini, lalu <strong>klik lagi tombolnya</strong> sampai masuk ke brankas. Iklan membantu server ini tetap online 🙏
+</div>
+        <div class="password-box">
+            <h3>🔑 Password untuk membuka file:</h3>
+            <div class="password">123</div>
+        </div>
+
+        <h2>📋 Cara Mengakses File:</h2>
+        <p>Ikuti langkah mudah berikut untuk mendapatkan akses penuh:</p>
+        <div class="info-list">
+            <ul>
+                <li>Klik tombol "BUKA BRANKAS PASTELINK" di atas</li>
+                <li>Tunggu halaman terbuka (abaikan iklan yang muncul kalau ada iklan kembali terus klik lagi sampai bisa terarahkan ke web pastelink adanya iklan kalian sedang support kreator buat beli kopi agar bisa upload konten setiap hari😅)</li>
+                <li>Klik tombol "Download" atau "View"</li>
+                <li>Masukkan password: <strong>123</strong></li>
+                <li>File siap dinikmati!</li>
+            </ul>
+        </div>
+
+        <h2>⚡ Kenapa Harus Lewat Kami?</h2>
+        <p>Kami adalah portal kurasi terpercaya yang selalu update setiap hari. Kami menjamin:</p>
+        <div class="info-list">
+            <ul>
+                <li>File asli, bukan editan atau potongan</li>
+                <li>Server cepat, tidak lemot saat stream</li>
+                <li>Password selalu aktif dan tidak pernah kadaluarsa</li>
+                <li>Update harian dengan konten viral terbaru</li>
+                <li>Aman dari virus dan malware</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; color: #9733EE; font-weight: bold; margin-top: 25px; font-size: 16px;">
+            Jangan sampai ketinggalan! Jadilah yang pertama menonton sebelum video ini dihapus dari peredaran. 🔥
+        </p>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Viral Zone ID. Portal Hiburan Digital Terdepan.</p>
+    </div>
+
+<script src="https://pl30694388.effectivecpmnetwork.com/92/ee/55/92ee55f9afd0ab07894cf5f9340a20df.js"></script>
+<script src="https://pl30694389.effectivecpmnetwork.com/75/de/25/75de253ac43f1176ca54daf5ba7ecafe.js"></script>
+
+</body>
+</html>
